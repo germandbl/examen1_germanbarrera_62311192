@@ -1,3 +1,4 @@
+import 'package:books_application_germanbarrera/presentation/widgets/book_card.dart';
 import 'package:flutter/material.dart';
 
 class LibraryScreen extends StatelessWidget {
@@ -5,6 +6,16 @@ class LibraryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey.shade700,
+        title: const Text('Lista de libros', style: TextStyle(color: Colors.white)),
+      ),
+      body: ListView(
+        children: const [
+          BookCard()
+        ],
+      ),
+    );
   }
 }

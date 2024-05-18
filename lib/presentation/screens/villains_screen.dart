@@ -1,6 +1,5 @@
 import 'package:books_application_germanbarrera/application/repositories/books_repository_impl.dart';
 import 'package:books_application_germanbarrera/domain/entities/book.dart';
-import 'package:books_application_germanbarrera/presentation/widgets/book_card.dart';
 import 'package:books_application_germanbarrera/presentation/widgets/villain_card.dart';
 import 'package:flutter/material.dart';
 

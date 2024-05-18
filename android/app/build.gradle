@@ -1,3 +1,5 @@
+//Examen hecho por German David Barrera Lopez
+
 plugins {
     id "com.android.application"
     id "kotlin-android"

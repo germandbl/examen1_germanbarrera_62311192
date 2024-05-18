@@ -4,14 +4,12 @@ import 'package:books_application_germanbarrera/domain/entities/book.dart';
 import 'package:books_application_germanbarrera/domain/repositories/books_repository.dart';
 import 'package:flutter/services.dart';
 
-
-
 class BooksRepositoryImpl implements BooksRepository {
-  final path = '../../infrastructure/data/data.json';
+  final path = 'assets/data.json';
 
   @override
   Future<Book> getBookById(int id) {
-     // TODO: implement getBooks
+    // TODO: implement getBooks
     throw UnimplementedError();
   }
 
@@ -21,5 +19,4 @@ class BooksRepositoryImpl implements BooksRepository {
     final data = json.decode(response);
     return data['data'];
   }
-
 }

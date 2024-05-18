@@ -7,6 +7,7 @@ class LibraryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade900,
       appBar: AppBar(
         backgroundColor: Colors.grey.shade700,
         title: const Text('Lista de libros', style: TextStyle(color: Colors.white)),

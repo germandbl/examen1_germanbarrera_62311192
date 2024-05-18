@@ -8,9 +8,20 @@ class BookCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ListTile(
-      title: Text('Nombre libro'),
-      subtitle: Text('Subtitle'),
+    return ListTile(
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.white, fontSize: 20),
+      ),
+      subtitle: Text(
+        publisher,
+        style: const TextStyle(color: Colors.white, fontSize: 18),
+      ),
+      trailing: const Icon(
+        Icons.keyboard_arrow_right_rounded,
+        color: Colors.white,
+        size: 38,
+      ),
     );
   }
 }

@@ -11,9 +11,10 @@ class BooksRepositoryImpl implements BooksRepository {
       List<Book>.from(json.decode(str).map((x) => Book.fromJson(x)).toList());
 
   @override
-  Future<Book> getBookById(int id) {
-    // TODO: implement getBooks
-    throw UnimplementedError();
+  Future<Book> getBookById(int id) async {
+    final booksResponse = await getBooks();
+    final books = booksResponse.toList();
+    return books.firstWhere((book) => book.id == id);
   }
 
   @override

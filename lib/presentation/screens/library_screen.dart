@@ -35,7 +35,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
         itemCount: books.length,
         itemBuilder: (context, index) {
           final book = books[index];
-          return BookCard(title: book.title, publisher: book.publisher);
+          return BookCard(book: book);
         },
       ),
     );

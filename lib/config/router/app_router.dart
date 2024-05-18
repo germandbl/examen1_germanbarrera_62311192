@@ -8,8 +8,11 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
       builder: (context, state) => const LibraryScreen(),
       routes: [
         GoRoute(
-          path: 'villains',
-          builder: (context, state) => const VillainsScreen(),
+          path: 'villains/:bookid',
+          builder: (context, state) {
+            final int bookId = int.parse(state.pathParameters['bookid'] ?? '-1');
+            return VillainsScreen( bookId: bookId );
+          },
         )
       ]),
 ]);

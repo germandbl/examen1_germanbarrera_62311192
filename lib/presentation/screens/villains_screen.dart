@@ -1,5 +1,7 @@
 import 'package:books_application_germanbarrera/application/repositories/books_repository_impl.dart';
 import 'package:books_application_germanbarrera/domain/entities/book.dart';
+import 'package:books_application_germanbarrera/presentation/widgets/book_card.dart';
+import 'package:books_application_germanbarrera/presentation/widgets/villain_card.dart';
 import 'package:flutter/material.dart';
 
 class VillainsScreen extends StatefulWidget {
@@ -25,11 +27,17 @@ class _VillainsScreenState extends State<VillainsScreen> {
     _cargarLibro();
 
     return Scaffold(
+      backgroundColor: Colors.grey.shade800,
       appBar: AppBar(
-        title: Text(
-          'Villanos del libro ${book?.title}',
-          style: const TextStyle(fontSize: 18),
-        ),
+        backgroundColor: Colors.grey.shade700,
+        title: Text('Villanos del libro ${book?.title}',
+            style: const TextStyle(color: Colors.white, fontSize: 18)),
+      ),
+      body: ListView.builder(
+        itemCount: book?.villains.length,
+        itemBuilder: (context, index) {
+          return VillainCard(name: book?.villains[index].name);
+        },
       ),
     );
   }

@@ -13,7 +13,7 @@ class LibraryScreen extends StatelessWidget {
       ),
       body: ListView(
         children: const [
-          BookCard()
+          BookCard(title: 'Titulo libro', publisher: 'Publisher'),
         ],
       ),
     );

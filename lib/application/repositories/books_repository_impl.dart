@@ -5,7 +5,7 @@ import 'package:books_application_germanbarrera/domain/repositories/books_reposi
 import 'package:flutter/services.dart';
 
 class BooksRepositoryImpl implements BooksRepository {
-  final path = 'assets/data.json';
+  final String path = 'assets/data.json';
 
   @override
   Future<Book> getBookById(int id) {

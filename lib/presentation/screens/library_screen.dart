@@ -25,7 +25,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
     _cargarDatos();
 
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.grey.shade800,
       appBar: AppBar(
         backgroundColor: Colors.grey.shade700,
         title: const Text('Lista de libros',

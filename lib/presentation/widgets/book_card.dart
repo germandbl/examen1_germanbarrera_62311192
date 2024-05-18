@@ -11,11 +11,11 @@ class BookCard extends StatelessWidget {
     return ListTile(
       title: Text(
         title,
-        style: const TextStyle(color: Colors.white, fontSize: 20),
+        style: const TextStyle(color: Colors.white, fontSize: 18),
       ),
       subtitle: Text(
         publisher,
-        style: const TextStyle(color: Colors.white, fontSize: 18),
+        style: const TextStyle(color: Colors.white, fontSize: 16),
       ),
       trailing: const Icon(
         Icons.keyboard_arrow_right_rounded,

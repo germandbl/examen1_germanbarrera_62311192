@@ -7,6 +7,9 @@ import 'package:flutter/services.dart';
 class BooksRepositoryImpl implements BooksRepository {
   final String path = 'assets/data.json';
 
+  List<Book> _bookFromJson(String str) =>
+      List<Book>.from(json.decode(str).map((x) => Book.fromJson(x)).toList());
+
   @override
   Future<Book> getBookById(int id) {
     // TODO: implement getBooks
@@ -16,7 +19,6 @@ class BooksRepositoryImpl implements BooksRepository {
   @override
   Future<List<Book>> getBooks() async {
     final String response = await rootBundle.loadString(path);
-    final data = json.decode(response);
-    return data['data'];
+    return _bookFromJson(response);
   }
 }
